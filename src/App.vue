@@ -1,15 +1,6 @@
 <template>
   <div>
-    <div id="app">
-      <i class="toutiao toutiao-lishi"></i>
-    </div>
-    黑马头条
-    <van-button type="primary">主要按钮</van-button>
-    <van-button type="info">信息按钮</van-button>
-    <van-button type="default">默认按钮</van-button>
-    <van-button type="warning">警告按钮</van-button>
-    <van-button type="danger">危险按钮</van-button>
-    <div class="btn">登录</div>
+    <router-view></router-view>
   </div>
 </template>
 
