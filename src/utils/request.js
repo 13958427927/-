@@ -25,7 +25,6 @@ request.interceptors.request.use(
     if (isLogin) {
       config.headers.Authorization = `Bearer ${tokenObj.token}`
     }
-    console.log(config)
     return config // 必须返回
   },
   function (error) {
