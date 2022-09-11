@@ -144,7 +144,7 @@ export default {
   }
 }
 </script>
-
+featuer/profile
 <style scoped lang="less">
 .nav-bar {
   background-color: #3396fc;

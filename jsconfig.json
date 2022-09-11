@@ -5,7 +5,9 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "cpns/*": ["src/components/*"],
+      "views/*": ["src/views/*"]
     },
     "jsx": "preserve",
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]

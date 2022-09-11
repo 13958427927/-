@@ -6,7 +6,6 @@ import request from '@/utils/request'
  * @param {number}} code  验证码
  * @returns Promise
  */
-
 export const login = (mobile, code) => {
   return request({
     url: '/v1_0/authorizations',
@@ -25,5 +24,22 @@ export const login = (mobile, code) => {
 export const sendCodeApi = (mobile) => {
   return request({
     url: `/v1_0/sms/codes/${mobile}`
+  })
+}
+
+/**
+ * 获取用户信息
+ *  注意
+ * 在这里this.$store.state.tokenObj获取不到token
+ * 因为js没有this 只能引入import
+ * @returns Promise
+ */
+export const getUserInfoAPI = () => {
+  return request({
+    url: '/v1_0/user'
+    // 由于每次登录都要加这个所以给他抽出去挂载在request拦截器上面
+    // headers: {
+    //   Authorization: `Bearer ${store.state.tokenObj.token}`
+    // }
   })
 }
