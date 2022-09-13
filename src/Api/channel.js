@@ -6,6 +6,11 @@ import request from '@/utils/request'
  */
 export const grtChannelAPI = () => {
   return request({
+    url: '/v1_0/user/channels'
+  })
+}
+export const grtAllChannelsApi = () => {
+  return request({
     url: '/v1_0/channels'
   })
 }

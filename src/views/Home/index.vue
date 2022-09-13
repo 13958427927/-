@@ -11,22 +11,36 @@
       <van-tab v-for="item in channels" :key="item.id" :title="item.name">
         <AticleList :id="item.id"></AticleList>
       </van-tab>
-      <span class="toutiao toutiao-gengduo"></span>
+      <span class="toutiao toutiao-gengduo" @click="isShow = true"></span>
     </van-tabs>
+    <!-- 弹出层 -->
+    <van-popup
+      v-model="isShow"
+      closeable
+      close-icon-position="top-left"
+      position="bottom"
+      :style="{ height: '100%' }"
+      ><ChannelEdit
+        @change-active=";[(isShow = false), (active = $event)]"
+        :myChannels="channels"
+      ></ChannelEdit>
+    </van-popup>
   </div>
 </template>
-j
 <script>
 import { grtChannelAPI } from '@/Api'
 import AticleList from './components/AticleList.vue'
+import ChannelEdit from './components/ChannelEdit.vue'
 export default {
   components: {
-    AticleList
+    AticleList,
+    ChannelEdit
   },
   data() {
     return {
       active: 2,
-      channels: []
+      channels: [],
+      isShow: false
     }
   },
   created() {
