@@ -25,13 +25,14 @@ export default new Vuex.Store({
       // storage: window.localStorage
       // 会话存储
       // storage: window.sessionStorage
-      reducer({ tokenObj }) {
-        return { tokenObj }
+      reducer({ tokenObj, myChannels }) {
+        return { tokenObj, myChannels }
       }
     })
   ],
   state: {
-    tokenObj: {}
+    tokenObj: {},
+    myChannels: []
   },
   getters: {
     isLogin(state) {
@@ -42,6 +43,13 @@ export default new Vuex.Store({
     SET_TOKEN(state, token) {
       // 将tokon存在vuex
       state.tokenObj = token
+    },
+    /**
+     *
+     * @param {Array} channels 删除或添加后最新的channels
+     */
+    SET_MY_CHANNELS(state, channels) {
+      state.myChannels = channels
     }
   },
   actions: {},
