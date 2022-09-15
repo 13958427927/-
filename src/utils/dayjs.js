@@ -1,3 +1,4 @@
+// 格式化事件的格式
 import dayjs from 'dayjs'
 const relativeTime = require('dayjs/plugin/relativeTime')
 require('dayjs/locale/zh-cn')

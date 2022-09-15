@@ -17,7 +17,6 @@ export default request
 request.interceptors.request.use(
   function (config) {
     // 在发送请求之前做些什么
-
     const {
       getters: { isLogin },
       state: { tokenObj }

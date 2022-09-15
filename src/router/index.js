@@ -17,19 +17,19 @@ const routes = [
     children: [
       {
         path: '/ ',
-        component: () => import(/* wbpackChunkName:"base" */ '@/views/Home')
+        component: () => import(/* wbpackChunkName:"Home" */ '@/views/Home')
       },
       {
         path: '/video',
-        component: () => import(/* wbpackChunkName:"base" */ '@/views/Video')
+        component: () => import(/* wbpackChunkName:"video" */ '@/views/Video')
       },
       {
         path: '/qa',
-        component: () => import('@/views/QA')
+        component: () => import(/* wbpackChunkName:"QA" */ '@/views/QA')
       },
       {
         path: '/profile',
-        component: () => import('@/views/My')
+        component: () => import(/* wbpackChunkName:"profile" */ '@/views/My')
       }
     ]
   },
@@ -37,6 +37,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import('@/views/login')
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: () => import(/* wbpackChunkName： "Search" */ '@/views/Search')
   }
 ]
 
