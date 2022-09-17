@@ -42,6 +42,16 @@ const routes = [
     path: '/search',
     name: 'search',
     component: () => import(/* wbpackChunkName： "Search" */ '@/views/Search')
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: () => import(/* wbpackChunkName： "User" */ '@/views/User')
+  },
+  {
+    path: '/detail/:article_id',
+    name: 'detail',
+    component: () => import(/* wbpackChunkName： "Search" */ '@/views/Search')
   }
 ]
 

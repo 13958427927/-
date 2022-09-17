@@ -43,3 +43,33 @@ export const getUserInfoAPI = () => {
     // }
   })
 }
+/**
+ *
+ * @param {String} file 传base64
+ * @returns
+ */
+export const uploadPhoto = (file) => {
+  const fm = new FormData()
+  fm.append('photo', file)
+  return request({
+    url: '/v1_0/user/photo',
+    method: 'PATCH',
+    data: fm
+  })
+}
+/**
+ *
+ * @returns Promise
+ */
+export const personalDataAPI = () => {
+  return request({
+    url: '/v1_0/user/profile'
+  })
+}
+export const amendDataAPI = (data) => {
+  return request({
+    url: '/v1_0/user/profile',
+    method: 'PATCH',
+    data
+  })
+}

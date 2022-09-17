@@ -16,3 +16,9 @@ export const getArticlesAPI = (id, timestamp) => {
     }
   })
 }
+
+export const NewsDetails = (id) => {
+  return request({
+    url: `/v1_0/articles/:${id}`
+  })
+}
